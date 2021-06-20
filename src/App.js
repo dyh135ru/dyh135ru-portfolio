@@ -1,7 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link  } from 'react-router-dom';
 import { Container, Navbar, Nav } from 'react-bootstrap';
+
+/*-----------------------------
+Components */
+
+import Footer from './components/Footer';
+
+/*-----------------------------
+ Pages */
+
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage'; 
+import ProjectsPage from './pages/ProjectsPage';
+import ContactPage from './pages/ContactPage';
+
 import './App.css'; 
+
 
 class App extends React.Component {
 
@@ -45,10 +60,18 @@ class App extends React.Component {
                   <Link className="nav-link" to="/projects">Projects</Link>
                   <Link className="nav-link" to="/about">About</Link>
                   <Link className="nav-link" to="/contact">Contact</Link>
-
+                  
+                  
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
+
+            <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>}/>
+            <Route path="/projects" render={() => <ProjectsPage title={this.state.projects.title} />}/>
+            <Route path="/about" render={() => <AboutPage title={this.state.about.title} />}/>
+            <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />}/>
+
+            <Footer />
           </Container>
         </Router>
       );
