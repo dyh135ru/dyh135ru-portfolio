@@ -7,6 +7,7 @@ Components */
 
 import Footer from './components/Footer';
 
+
 /*-----------------------------
  Pages */
 
@@ -30,7 +31,7 @@ class App extends React.Component {
         {title: 'Contact', path: '/contact'},
       ],
       home: {
-        title: 'My Portfolio',
+        title: 'Hi, I\'m Dylan',
         subTitle: 'Welcome!',
         text: 'Checkout my projects below'
       },
@@ -50,8 +51,8 @@ class App extends React.Component {
     return (
         <Router>
           <Container className="p-0" fluid={true}>
-            <Navbar className="border-bottom" bg="transpartent" expand="lg">
-              <Navbar.Brand>Dylan Javier Ruiz Herrera</Navbar.Brand>
+            <Navbar sticky="top" className="border-bottom navbar-dark bg-dark"  expand="lg">
+              <Navbar.Brand>My Portfolio</Navbar.Brand>
 
               <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
               <Navbar.Collapse id="navbar-toogle">
@@ -66,11 +67,12 @@ class App extends React.Component {
               </Navbar.Collapse>
             </Navbar>
 
-            <Route path="/dyh135ru-portfolio" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>}/>
+            <Route path="/dyh135ru-portfolio" render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text}/>}/>
             <Route path="/projects" render={() => <ProjectsPage title={this.state.projects.title} />}/>
             <Route path="/about" render={() => <AboutPage title={this.state.about.title} />}/>
             <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />}/>
-
+            
+            
             <Footer />
           </Container>
         </Router>
