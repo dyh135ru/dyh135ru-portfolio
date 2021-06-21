@@ -1,23 +1,136 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import styled from 'styled-components';
+import FooterCol from './FooterCol';
+import PText from './PText';
 
-function Footer(){
+const FooterStyle = styled.div`
+  background-color: var(--deep-dark);
+  padding-top: 10rem;
+  .container {
+    display: flex;
+    gap: 3rem;
+  }
+  .footer__col1 {
+    flex: 2;
+  }
+  .footer__col2,
+  .footer__col3,
+  .footer__col4 {
+    flex: 1;
+  }
+  .footer__col1__title {
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    color: var(--gray-1);
+  }
+  .copyright {
+    background-color: var(--dark-bg);
+    text-align: left;
+    padding: 1rem 0;
+    margin-top: 5rem;
+    .para {
+      margin-left: 0;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 0rem;
+      & > div {
+        margin-top: 5rem;
+      }
+    }
+    .footer__col1 .para {
+      max-width: 100%;
+    }
+    .copyright {
+      .container {
+        div {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+`;
 
-    return( 
-        <footer className="mt-5">
-            <Container fluid={true}>
-                <Row className="border-top justify-content-between p-3">
-                    <Col className="p-0" md={4} sm={4} xs={6}>
-                        Dylan Javier Ruiz Herrera
-                    </Col>
-                    <Col className="p-0 d-flex justify-content-end" md={8} sm={8} xs={6}>
-                        This site was made by Dylan Javier Ruiz Herrera.
-                    </Col>
-                </Row>
-            </Container>
-        </footer>
-    );
-
+export default function Footer() {
+  return (
+    <FooterStyle>
+      <div className="container">
+        <div className="footer__col1">
+          <h1 className="footer__col1__title">Dylan Javier Ruiz Herrera</h1>
+        </div>
+        <div className="footer__col2">
+          <FooterCol
+            heading="Important Links"
+            links={[
+              {
+                title: 'Home',
+                path: '/dyh135ru-portfolio',
+                type: 'Link',
+              },
+              {
+                type: 'Link',
+                title: 'About',
+                path: '/about',
+              },
+              {
+                type: 'Link',
+                title: 'Projects',
+                path: '/projects',
+              },
+              {
+                type: 'Link',
+                title: 'Contact',
+                path: '/contact',
+              },
+            ]}
+          />
+        </div>
+        <div className="footer__col3">
+          <FooterCol
+            heading="Contact Info"
+            links={[
+              {
+                title: '+52 6691521550',
+                path: 'tel:+52 6691521550',
+              },
+              {
+                title: 'dyruiz26@gmail.com',
+                path: 'mailto:dyruiz26@gmail.com',
+              },
+              {
+                title: 'Mazatlan, Sinaloa, Mexico',
+                path: 'http://google.com/maps',
+              },
+            ]}
+          />
+        </div>
+        <div className="footer__col4">
+          <FooterCol
+            heading="Social Links"
+            links={[
+              {
+                title: 'Facebook',
+                path: 'http://facebook.com',
+              },
+              {
+                title: 'Twitter',
+                path: 'http://twitter.com',
+              },
+              {
+                title: 'Instagram',
+                path: 'http://instagram.com',
+              },
+            ]}
+          />
+        </div>
+      </div>
+      <div className="copyright">
+        <div className="container">
+          <PText>© 2021 - Dylan Javier Ruiz Herrera</PText>
+        </div>
+      </div>
+    </FooterStyle>
+  );
 }
-
-export default Footer;
