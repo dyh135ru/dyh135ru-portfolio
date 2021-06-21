@@ -1,9 +1,14 @@
 import React from 'react';
+import ContactSection from '../components/ContactSection';
+import Map from '../components/Map';
+import Footer from '../components/Footer';
 
 export default function Contact() {
   return (
-    <div>
-      <h1>This is contact page</h1>
-    </div>
+    <>
+      <ContactSection />
+      <Map />
+      <Footer />
+    </>
   );
 }

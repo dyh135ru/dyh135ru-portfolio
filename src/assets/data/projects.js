@@ -1,45 +1,62 @@
 import { v4 as uuidv4 } from 'uuid';
-import ProjectImg from '../images/projectImg.png';
-import UTrackerImg from '../images/utracker.jpg';
-import GreenCtgImg from '../images/greenctg.jpg';
-import CoinTrackerImg from '../images/cointracker.jpg';
-import CavinImg from '../images/cavinimg.jpg';
+
+import Pacman from '../images/pacman.png';
+import Mazatlan from '../images/mazatlan.png';
+import Eyes from '../images/eyes.png';
+import Pacman2 from '../images/pacman2.PNG';
+import Balls from '../images/balls.PNG';
+import Hanoi from '../images/hanoi.PNG';
 
 const projects = [
   {
     id: uuidv4(),
-    name: 'U Tracker',
+    name: 'DOM Pacman',
     desc:
-      'An application to track your all data from one place. I developed the website and the mobile app',
-    img: UTrackerImg,
+      'It consists of spawning Pacmans in the DOM, and they move around the screen.',
+    img: Pacman2,
+    link1: 'https://dyh135ru.github.io/DOMPacman/',
+    link2: 'https://github.com/dyh135ru/DOMPacman',
   },
   {
     id: uuidv4(),
-    name: 'Green CTG',
-    desc:
-      'An app to help people to get an overview of how they can make the city beautiful.',
-    img: GreenCtgImg,
+    name: 'Map Animations',
+    desc: 'It displays a map with animations from point A to point B.',
+    img: Mazatlan,
+    link1: 'https://dyh135ru.github.io/MapAnimations/',
+    link2: 'https://github.com/dyh135ru/MapAnimations',
   },
   {
     id: uuidv4(),
-    name: 'Coin Tracker',
-    desc:
-      'Using this app you can track any e coin. Also you will get a good advise about investment form the professional',
-    img: CoinTrackerImg,
+    name: 'Big Eyes',
+    desc: 'It consists in two eyes that follow your mouse.',
+    img: Eyes,
+    link1: 'https://dyh135ru.github.io/bigEyes/',
+    link2: 'https://github.com/dyh135ru/bigEyes',
   },
   {
     id: uuidv4(),
-    name: "Cavin's Portfolio",
+    name: 'Pacman Exercise',
     desc:
-      'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
-    img: CavinImg,
+      'It consists of detecting the edges of the screen and changing the pictures of the Pacman.',
+    img: Pacman,
+    link1: 'https://dyh135ru.github.io/pacmanExercise/',
+    link2: 'https://github.com/dyh135ru/pacmanExercise',
   },
   {
     id: uuidv4(),
-    name: 'Tracking Soft',
-    desc:
-      'A tracking website that will show the performance of the website. Also you will get some useful advice to improve the performance.',
-    img: ProjectImg,
+    name: 'RainbowBalls',
+    desc: 'It consists of bouncing balls on the screen.',
+    img: Balls,
+    link1: 'https://dyh135ru.github.io/RainbowBalls/',
+    link2: 'https://github.com/dyh135ru/RainbowBalls',
+  },
+  {
+    id: uuidv4(),
+    name: 'Hanoi-Tower',
+    desc: 'It consists of introducing a number of discs to complete the game.',
+    img: Hanoi,
+    link1: 'https://dyh135ru.github.io/Hanoi-tower/',
+    link2: 'https://github.com/dyh135ru/Hanoi-tower',
   },
 ];
 
