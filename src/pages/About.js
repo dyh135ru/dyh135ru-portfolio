@@ -120,7 +120,7 @@ export default function About() {
                 items={['Instituto Cultural de Occidente']}
               />
               <AboutInfoItem
-                title="Collage"
+                title="University"
                 items={['Universidad Politécnica de Sinaloa ']}
               />
             </div>
