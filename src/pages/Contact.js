@@ -6,9 +6,11 @@ import Footer from '../components/Footer';
 export default function Contact() {
   return (
     <>
-      <ContactSection />
-      <Map />
-      <Footer />
+      <div className="background-class-color">
+        <ContactSection />
+        <Map />
+        <Footer />
+      </div>
     </>
   );
 }

@@ -1,5 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  AiFillGithub,
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiOutlineArrowDown,
+} from 'react-icons/ai';
 import PText from '../components/PText';
 import AboutImg from '../assets/images/aboutme.jpg';
 import AboutInfoItem from '../components/AboutInfoItem';
@@ -57,6 +63,47 @@ const AboutPageStyles = styled.div`
     font-size: 3.6rem;
     text-transform: uppercase;
   }
+
+  .hero__social,
+  .hero__scrollDown {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    bottom: 20px;
+    width: 50px;
+  }
+
+  .hero__social {
+    left: 50px;
+  }
+
+  .hero__social__indicator,
+  .hero__scrollDown {
+    width: 50px;
+    p {
+      font-size: 1.6rem;
+      transform: translateY(-70px) rotate(90deg);
+      letter-spacing: 0.7rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .hero__social__text {
+    ul {
+      li {
+        margin-bottom: 1rem;
+        a {
+          display: inline-block;
+          font-size: 3rem;
+          transform: rotate(-90deg);
+          letter-spacing: 5px;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     padding: 10rem 0;
     .top-section {
@@ -72,13 +119,34 @@ const AboutPageStyles = styled.div`
     .about__info__heading {
       font-size: 3rem;
     }
+    .hero__social {
+      left: 0px;
+      bottom: -20%;
+      width: 20px;
+      .hero__social__indicator {
+        width: 20px;
+        p {
+          font-size: 1.2rem;
+        }
+      }
+      .hero__social__text {
+        ul {
+          li {
+            a {
+              font-size: 2rem;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
 export default function About() {
   return (
     <>
-      <AboutPageStyles>
+      <AboutPageStyles className="background-class-color">
         <div className="container">
           <div className="top-section">
             <div className="left">
@@ -111,6 +179,43 @@ export default function About() {
               <img src={AboutImg} alt="me" />
             </div>
           </div>
+          <div className="hero__social">
+            <div className="hero__social__indicator">
+              <p>Follow</p>
+            </div>
+            <div className="hero__social__text">
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/dyh135ru"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiFillGithub />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/DylanRu61564512"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiFillTwitterCircle />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/dylan-javier-ruiz-herrera-a3a40b205/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiFillLinkedin />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <div className="about__info__items">
             <div className="about__info__item">
               <h1 className="about__info__heading">Education</h1>

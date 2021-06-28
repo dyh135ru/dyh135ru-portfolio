@@ -65,7 +65,7 @@ export default function Projects() {
   };
   return (
     <>
-      <ProjectStyle>
+      <ProjectStyle className="background-class-color">
         <div className="container">
           <SectionTitle
             heading="Projects"

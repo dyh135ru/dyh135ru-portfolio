@@ -20,6 +20,11 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto Mono';
     background-color: var(--dark-bg);
   }
+
+  .background-class-color{
+    background-color: var(--dark-bg);
+  }
+
   ul,li{
     list-style: none;
   }

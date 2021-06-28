@@ -111,16 +111,17 @@ export default function Footer() {
             heading="Social Links"
             links={[
               {
-                title: 'Facebook',
-                path: 'http://facebook.com',
+                title: 'Git Hub',
+                path: 'https://github.com/dyh135ru',
               },
               {
                 title: 'Twitter',
-                path: 'http://twitter.com',
+                path: 'https://twitter.com/DylanRu61564512',
               },
               {
-                title: 'Instagram',
-                path: 'http://instagram.com',
+                title: 'LinkedIn',
+                path:
+                  'https://www.linkedin.com/in/dylan-javier-ruiz-herrera-a3a40b205/',
               },
             ]}
           />

@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import {
+  AiFillGithub,
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+} from 'react-icons/ai';
 import HeroImg from '../assets/images/hero.jpg';
 import Button from './Button';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
@@ -83,7 +88,7 @@ const HeroStyles = styled.div`
         margin-bottom: 1rem;
         a {
           display: inline-block;
-          font-size: 1.6rem;
+          font-size: 3rem;
           transform: rotate(-90deg);
           letter-spacing: 5px;
           margin-bottom: 2rem;
@@ -125,7 +130,7 @@ const HeroStyles = styled.div`
         ul {
           li {
             a {
-              font-size: 1.2rem;
+              font-size: 2rem;
               margin-bottom: 1rem;
             }
           }
@@ -171,23 +176,30 @@ export default function HeroSection() {
             <div className="hero__social__text">
               <ul>
                 <li>
-                  <a href="#" target="_blank" rel="noreferrer">
-                    FB
+                  <a
+                    href="https://github.com/dyh135ru"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiFillGithub />
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noreferrer">
-                    TW
+                  <a
+                    href="https://twitter.com/DylanRu61564512"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiFillTwitterCircle />
                   </a>
                 </li>
                 <li>
-                  <a href="#" target="_blank" rel="noreferrer">
-                    IG
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank" rel="noreferrer">
-                    LI
+                  <a
+                    href="https://www.linkedin.com/in/dylan-javier-ruiz-herrera-a3a40b205/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <AiFillLinkedin />
                   </a>
                 </li>
               </ul>
